@@ -1,3 +1,4 @@
+import http from "http";
 const express = require("express");
 const cors = require("cors");
 const taskRoutes = require("./routes/taskRoutes");
@@ -6,13 +7,15 @@ const PORT = process.env.PORT || 10000;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });
+app.get("/health", (req, res) => res.status(200).send("ok"));
 
-app.use(cors());
-app.use(express.json());
-app.use("/tasks", taskRoutes);
-app.get("/", (req, res) => {
-  res.send("TaskMaster API is running!");
-});
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+const PORT = process.env.PORT || 10000;
+const server = http.createServer(app);
+
+// زيد التايم‌آوتات (كما قالت Render)
+server.keepAliveTimeout = 120000;   // 120s
+server.headersTimeout   = 120000;   // 120s
+
+server.listen(PORT, "0.0.0.0", () => {
+  console.log("Server running on", PORT);
 });
