@@ -1,2 +1,22 @@
-# Task_Master_Full_Project
-This project is the frontend and backend for the TASKMASTER website, which helps users create, manage, and track tasks. It allows setting deadlines, priority levels, and task statuses, as well as filtering, editing, and deleting tasks.
+# 📝 Task Master – Full Project
+
+Task Master is a full-stack web application that helps users create, manage, and track tasks.
+It allows setting deadlines, priorities, and statuses, as well as filtering, editing, and deleting tasks easily.
+
+🚀 Features
+
+Add, edit, and delete tasks
+
+Set deadlines and priority levels (High, Medium, Low)
+
+Mark tasks as To do, In Progress, or Done
+
+Filter and sort tasks by priority, status, or deadline
+
+Clean and responsive user interface
+
+🛠️ Tech Stack
+
+Frontend: React && CSS
+
+Backend: Node.js (Express)
